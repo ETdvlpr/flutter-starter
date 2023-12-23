@@ -1,0 +1,141 @@
+name: flutter_app
+description: App to exchange money to other Currencies at your Own Terms.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #For ios icons
+  cupertino_icons: ^1.0.2
+
+  #For state management, dependency injection and routing
+  get: ^4.6.6
+
+  #For firebase services
+  firebase_core: ^2.20.0
+  firebase_auth: ^4.12.0
+  firebase_messaging: ^14.7.2
+
+  #For storage
+  get_storage: ^2.1.1
+
+  #For http requests
+  dio: ^5.3.3
+  mime: ^1.0.4
+  http_parser: ^4.0.2
+
+  #For parsing json
+  json_annotation: ^4.8.1
+  freezed_annotation: ^2.4.1
+
+  #For creating splash screen
+  flutter_native_splash: ^2.3.2 # dart run flutter_native_splash:create
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+  #For changing app package name
+  change_app_package_name: ^1.1.0 # flutter pub run change_app_package_name:main com.flutter_app
+
+  #For changing app icon
+  flutter_launcher_icons: ^0.13.1 # flutter pub run flutter_launcher_icons
+
+  #For generating models
+  freezed: ^2.4.5 # dart run build_runner build
+  json_serializable: ^6.7.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: 'DM Sans'
+      fonts:
+        - asset: fonts/DMSans/DMSans-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: fonts/DMSans/DMSans-Black.ttf
+          weight: 900
+        - asset: fonts/DMSans/DMSans-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: fonts/DMSans/DMSans-ExtraBold.ttf
+          weight: 800
+        - asset: fonts/DMSans/DMSans-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: fonts/DMSans/DMSans-Bold.ttf
+          weight: 700
+        - asset: fonts/DMSans/DMSans-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: fonts/DMSans/DMSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/DMSans/DMSans-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: fonts/DMSans/DMSans-Medium.ttf
+          weight: 500
+        - asset: fonts/DMSans/DMSans-Regular.ttf
+          weight: 400
+        - asset: fonts/DMSans/DMSans-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: fonts/DMSans/DMSans-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: fonts/DMSans/DMSans-Light.ttf
+          weight: 300
+        - asset: fonts/DMSans/DMSans-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: fonts/DMSans/DMSans-ExtraLight.ttf
+          weight: 200
+        - asset: fonts/DMSans/DMSans-ThinItalic.ttf
+          weight: 100
+          style: italic
+        - asset: fonts/DMSans/DMSans-Thin.ttf
+          weight: 100
+    # - family: 'CustomIcons'
+    #   fonts:
+    #     - asset: fonts/custom/custom_icons.ttf
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/logo.jpg
+
+  android_12:
+    image: assets/images/12/logo.png
+    color: "#ffffff"
+    icon_background_color: "#ffffff"
+
+  android: true
+  ios: true
+
+  android_gravity: center
+  ios_content_mode: center
+
+  fullscreen: true
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
